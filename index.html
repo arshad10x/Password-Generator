@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Password Generator</title>
+
+  <!-- ===== Google Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="password-generator">
+      <h2 id="title">Password Generator</h2>
+
+      <!-- Text Box -->
+      <div class="password">
+        <p id="passwordBox">CLICK GENERATE</p>
+      </div>
+      <!--  -->
+
+      <!-- Rage Silder -->
+      <label id="range" for="length">LENGTH <span id="rangeValue">0</span></label>
+
+      <div class="bcol ">
+         <sapn>4</sapn>
+         <input type="range" id="length" min="4" max="12" value="0" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+         <span>12</span>
+
+      </div>
+      <!--  -->
+      
+      <!-- Settings -->
+      <small id="range">SETTINGS</small>
+      <div class="bcol">
+        <label for="upperCase">Include Uppercase</label>
+        <input type="checkbox" id="upperCase" checked>
+      </div> 
+      
+      <div class="bcol">
+        <label for="lowerCase">Include Lowercase</label>
+        <input type="checkbox" id="lowerCase" checked>
+      </div>
+
+      <div class="bcol">
+        <label for="number">Include Numbers</label>
+        <input type="checkbox" id="number" checked>
+      </div>
+      <div class="bcol">
+        <label for="symbol">Include Symbols</label>
+        <input type="checkbox" id="symbol" checked>
+      </div> 
+      <!--  -->
+
+      <!-- Button -->
+      <button onclick="createPassword()">GENERATE PASSWORD</button> 
+      <!--  -->
+    </div>
+  </div>
+
+  <!-- Js File -->
+  <script src="index.js" defer></script>
+</body>
+</html>
